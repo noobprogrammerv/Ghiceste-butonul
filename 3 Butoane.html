@@ -18,9 +18,9 @@
                 <div class="card-body">
                     <form>
                         <p style="text-align:center">
-                        <button type="submit" class="btn btn-primary btn-lg" onclick="return random();">First button</button>
-                        <button type="submit" class="btn btn-danger btn-lg" onclick="return random();">Second button</button>
-                        <button type="submit" class="btn btn-success btn-lg" onclick="return random();">Third button</button>
+                        <button type="submit" class="btn btn-primary btn-lg" onclick="return random(id);">First button</button>
+                        <button type="submit" class="btn btn-danger btn-lg" onclick="return random(id);">Second button</button>
+                        <button type="submit" class="btn btn-success btn-lg" onclick="return random(id);">Third button</button>
                         </p>
                     </form>
                 </div>
@@ -31,8 +31,9 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
         <script>
-        function random(){
-            if (Math.floor(Math.random() * 3 + 1) == 1) {
+        let randm = Math.floor(Math.random() * 3);
+        function random(id){
+            if (randm == id) {
                 alert("Ati castigat!");
             } else {
                 alert("Nu ati castigat!");
